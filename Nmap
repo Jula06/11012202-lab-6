@@ -1,0 +1,65 @@
+┌──(kali㉿kali)-[~]
+└─$ nmap -V
+┌──(kali㉿kali)-[~]
+└─$ ifconfig
+┌──(kali㉿kali)-[~]
+└─$ nmap host.com
+┌──(kali㉿kali)-[~]
+└─$ nmap -v host.com
+┌──(kali㉿kali)-[~]
+└─$ wget -qO- ifconfig.me
+┌──(kali㉿kali)-[~]
+└─$ nmap -sn host.com/24
+┌──(kali㉿kali)-[~]
+└─$ nmap -sn sut.ac.th/24
+┌──(kali㉿kali)-[~]
+└─$ nmap -p 21 sut.ac.th. 
+┌──(kali㉿kali)-[~]
+└─$ nmap -p 80 sut.ac.th 
+┌──(kali㉿kali)-[~]
+└─$ nmap -p 22 sut.ac.th.
+┌──(kali㉿kali)-[~]
+└─$ nmap -p 23 sut.ac.th.
+┌──(kali㉿kali)-[~]
+└─$ nmap -p 443 sut.ac.th
+┌──(kali㉿kali)-[~]
+└─$ nmap --script “*-malware-*” infectedsite.com
+┌──(kali㉿kali)-[~]
+└─$ nmap -v --script vuln infectedsite.com
+┌──(kali㉿kali)-[~]
+└─$ nmap sut.ac.th 
+┌──(kali㉿kali)-[~]
+└─$ nmap -v sut.ac.th 
+┌──(kali㉿kali)-[~]
+└─$ sudo nmap -O -sV sut.ac.th
+┌──(kali㉿kali)-[~]
+└─$ nmap --script ''*-malware-*'' vulnweb.com
+┌──(kali㉿kali)-[~]
+└─$ nmap -v --script vuln testphp.vulnweb.com
+┌──(kali㉿kali)-[~]
+└─$ nmap -sV -script ssl-enum-ciphers manager.co.th
+┌──(kali㉿kali)-[/usr/share/nmap/scripts]
+└─$ cd                         
+                                                                                                                                                                                                                                            
+┌──(kali㉿kali)-[~]
+└─$ git clone https://github.com/scipag/vulscan.git
+
+Cloning into 'vulscan'...
+remote: Enumerating objects: 305, done.
+remote: Counting objects: 100% (135/135), done.
+remote: Compressing objects: 100% (51/51), done.
+remote: Total 305 (delta 97), reused 84 (delta 84), pack-reused 170 (from 1)
+Receiving objects: 100% (305/305), 17.06 MiB | 11.05 MiB/s, done.
+Resolving deltas: 100% (184/184), done.
+                                                                                                                                                                                                                                            
+┌──(kali㉿kali)-[~]
+└─$ sudo cp -r vulscan /usr/share/nmap/scripts/
+
+[sudo] password for kali: 
+                                                                                                                                                                                                                                            
+┌──(kali㉿kali)-[~]
+└─$ cd /usr/share/nmap/scripts/
+──(kali㉿kali)-[/usr/share/nmap/scripts]
+└─$ nmap -p 80,443,8080 -sV --script=vulscan/vulscan.nse vulnweb.com
+┌──(kali㉿kali)-[/usr/share/nmap/scripts]
+└─$ nmap -v -script vuln -d elearning2.sut.ac.th   
